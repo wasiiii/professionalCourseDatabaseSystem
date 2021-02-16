@@ -1,0 +1,14 @@
+<app-home></app-home>
+
+<nz-descriptions nzBordered [nzSize]="small" [nzColumn]= 1>
+    <nz-descriptions-item nzTitle="角色">{{roleName}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="用户名">{{id}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="姓名">{{name}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="班级" *ngIf="showClass">{{class}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="性别" *ngIf="showSex">{{sex}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="班主任" *ngIf="showHeadmaster">{{headmaster}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="绩点" *ngIf="showGpa">{{gpa}}</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="绩点排名" *ngIf="showGpa">{{rank}}</nz-descriptions-item>
+</nz-descriptions>
+
+<button nz-button nzType="danger" (click)="logout()">注销</button>

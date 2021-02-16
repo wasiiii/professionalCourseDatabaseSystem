@@ -1,0 +1,39 @@
+<app-home></app-home>
+
+<nz-table nzBordered nzTitle="课程组列表"  style="table-layout:fixed;">
+    <thead>
+      <tr>
+        <th>课程号</th>
+        <th>课程名称</th>
+        <th>课程组</th>
+        <th>待选教师</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allCourse">
+        <td>
+            {{item.Course_ID}}
+        </td>
+        <td>
+            {{item.Course_name}}
+        </td>
+        <td>
+            <p *ngFor="let ii of item.Group"><strong>教工号：</strong>{{ii}}  <strong>姓名：</strong>{{teaMap[ii]}}</p>
+        </td>
+        <td>
+          
+          <nz-select [ngModel]="item.selectedTeaNameAdd" (ngModelChange)="teaChangeAdd(item, $event)">
+            <nz-option *ngFor="let p of teaMap | keyvalue" [nzValue]="p.key" [nzLabel]="p.value"></nz-option>
+          </nz-select>
+          
+          <button nz-button nzType="primary" (click)="add(item)">添加</button>
+
+          <nz-select [ngModel]="item.selectedTeaNameDel" (ngModelChange)="teaChangeDel(item, $event)">
+            <nz-option *ngFor="let p of item.Group" [nzValue]="p" [nzLabel]="teaMap[p]"></nz-option>
+          </nz-select>
+
+          <button nz-button nzType="danger" (click)="delete(item)">删除</button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

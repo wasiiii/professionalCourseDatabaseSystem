@@ -1,0 +1,31 @@
+<nz-input-group>
+    <input 
+        nz-input 
+        nzSize="large"
+        placeholder="用户名" 
+        [(ngModel)]="account" 
+    />
+    <br />
+    <br />
+    <input
+        [type]="passwordVisible ? 'text' : 'password'"
+        nz-input
+        nzSize="large"
+        placeholder="输入密码"
+        [(ngModel)]="password"
+    />
+<br />
+<br />
+</nz-input-group>
+<button 
+    nz-button 
+    nzType="primary"
+    nzSize="large"
+    (click)="StuLogin()">学生登录
+</button>
+<button 
+    nz-button 
+    nzType="primary"
+    nzSize="large"
+    (click)="TeaLogin()">教师登录
+</button>

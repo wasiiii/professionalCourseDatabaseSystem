@@ -1,0 +1,36 @@
+<app-home></app-home>
+
+<nz-select [(ngModel)]="selectedClass" (ngModelChange)="classChange($event)">
+    <nz-option *ngFor="let p of class | keyvalue" [nzValue]="p.key" [nzLabel]="p.key"></nz-option>
+  </nz-select>
+班主任：
+<nz-select [(ngModel)]="selectedTeaName" (ngModelChange)="teaChange($event)">
+  <nz-option *ngFor="let p of teacher | keyvalue" [nzValue]="p.key" [nzLabel]="p.value"></nz-option>
+</nz-select>
+<button nz-button nzType="primary" (click)="change()">更改</button>
+<nz-table nzBordered nzTitle="学生列表"  style="table-layout:fixed;">
+    <thead>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>GPA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of showStu">
+        <td>
+            {{item.StuID}}
+        </td>
+        <td>
+            {{item.StuName}}
+        </td>
+        <td>
+            {{item.StuSex}}
+        </td>
+        <td>
+            {{item.Gpa}}
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

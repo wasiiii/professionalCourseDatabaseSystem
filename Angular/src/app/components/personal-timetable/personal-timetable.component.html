@@ -1,0 +1,292 @@
+<app-home></app-home>
+
+<nz-table nzBordered nzTitle="个人课表" style="table-layout:fixed;">
+    <thead>
+      <tr>
+        <th>节/周</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+            <p  *ngFor="let firstfirst of firstfirsts">
+                <strong>{{firstfirst.Course_name}}</strong><br>
+                <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstfirst.Section}}大节<br>
+                <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstfirst.Begin_Time}}-{{firstfirst.End_Time}}周<br>
+                <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{firstfirst.Course_ID}}<br>
+                <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{firstfirst.Tea_name}}</font>
+                <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{firstfirst.Class_id}}</font>
+            </p>
+        </td>
+        <td>
+            <p  *ngFor="let firstsecond of firstseconds">
+                <strong>{{firstsecond.Course_name}}</strong><br>
+                <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstsecond.Section}}大节<br>
+                <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstsecond.Begin_Time}}-
+                {{firstsecond.End_Time}}周<br>
+                <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{firstsecond.Course_ID}}<br>
+                <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{firstsecond.Tea_name}}</font>
+                <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{firstsecond.Class_id}}</font>
+            </p>
+        </td>
+        <td>
+          <p  *ngFor="let firstthird of firstthirds">
+              <strong>{{firstthird.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstthird.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstthird.Begin_Time}}-
+              {{firstthird.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{firstthird.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{firstthird.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{firstthird.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let firstforth of firstforths">
+              <strong>{{firstforth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstforth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstforth.Begin_Time}}-
+              {{firstforth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{firstforth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{firstforth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{firstforth.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let firstfifth of firstfifths">
+              <strong>{{firstfifth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstfifth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{firstfifth.Begin_Time}}-
+              {{firstfifth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{firstfifth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{firstfifth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{firstfifth.Class_id}}</font>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <p  *ngFor="let secondfirst of secondfirsts">
+              <strong>{{secondfirst.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondfirst.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondfirst.Begin_Time}}-
+              {{secondfirst.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{secondfirst.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{secondfirst.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{secondfirst.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let secondsecond of secondseconds">
+              <strong>{{secondsecond.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondsecond.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondsecond.Begin_Time}}-
+              {{secondsecond.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{secondsecond.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{secondsecond.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{secondsecond.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let secondthird of secondthirds">
+              <strong>{{secondthird.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondthird.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondthird.Begin_Time}}-
+              {{secondthird.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{secondthird.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{secondthird.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{secondthird.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let secondforth of secondforths">
+              <strong>{{secondforth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondforth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondforth.Begin_Time}}-
+              {{secondforth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{secondforth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{secondforth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{secondforth.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let secondfifth of secondfifths">
+              <strong>{{secondfifth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondfifth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{secondfifth.Begin_Time}}-
+              {{secondfifth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{secondfifth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{secondfifth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{secondfifth.Class_id}}</font>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <p  *ngFor="let thirdfirst of thirdfirsts">
+              <strong>{{thirdfirst.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdfirst.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdfirst.Begin_Time}}-
+              {{thirdfirst.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{thirdfirst.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{thirdfirst.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{thirdfirst.Class_id}}</font>
+          </p>
+        </td>
+        <td>
+          <p  *ngFor="let thirdsecond of thirdseconds">
+              <strong>{{thirdsecond.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdsecond.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdsecond.Begin_Time}}-
+              {{thirdsecond.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{thirdsecond.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{thirdsecond.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{thirdsecond.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let thirdthird of thirdthirds">
+              <strong>{{thirdthird.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdthird.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdthird.Begin_Time}}-
+              {{thirdthird.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{thirdthird.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{thirdthird.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{thirdthird.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let thirdforth of thirdforths">
+              <strong>{{thirdforth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdforth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdforth.Begin_Time}}-
+              {{thirdforth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{thirdforth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{thirdforth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{thirdforth.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let thirdfifth of thirdfifths">
+              <strong>{{thirdfifth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdfifth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{thirdfifth.Begin_Time}}-
+              {{thirdfifth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{thirdfifth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{thirdfifth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{thirdfifth.Class_id}}</font>
+          </p></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <p  *ngFor="let forthfirst of forthfirsts">
+              <strong>{{forthfirst.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthfirst.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthfirst.Begin_Time}}-
+              {{forthfirst.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{forthfirst.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{forthfirst.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{forthfirst.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let forthsecond of forthseconds">
+              <strong>{{forthsecond.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthsecond.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthsecond.Begin_Time}}-
+              {{forthsecond.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{forthsecond.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{forthsecond.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{forthsecond.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let forththird of forththirds">
+              <strong>{{forththird.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forththird.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forththird.Begin_Time}}-
+              {{forththird.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{forththird.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{forththird.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{forththird.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let forthforth of forthforths">
+              <strong>{{forthforth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthforth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthforth.Begin_Time}}-
+              {{forthforth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{forthforth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{forthforth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{forthforth.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let forthfifth of forthfifths">
+              <strong>{{forthfifth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthfifth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{forthfifth.Begin_Time}}-
+              {{forthfifth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{forthfifth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{forthfifth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{forthfifth.Class_id}}</font>
+          </p></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <p  *ngFor="let fifthfirst of fifthfirsts">
+              <strong>{{fifthfirst.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthfirst.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthfirst.Begin_Time}}-
+              {{fifthfirst.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{fifthfirst.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{fifthfirst.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{fifthfirst.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let fifthsecond of fifthseconds">
+              <strong>{{fifthsecond.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthsecond.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthsecond.Begin_Time}}-
+              {{fifthsecond.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{fifthsecond.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{fifthsecond.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{fifthsecond.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let fifththird of fifththirds">
+              <strong>{{fifththird.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifththird.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifththird.Begin_Time}}-
+              {{fifththird.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{fifththird.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{fifththird.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{fifththird.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let fifthforth of fifthforths">
+              <strong>{{fifthforth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthforth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthforth.Begin_Time}}-
+              {{fifthforth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{fifthforth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{fifthforth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{fifthforth.Class_id}}</font>
+          </p></td>
+        <td>
+          <p  *ngFor="let fifthfifth of fifthfifths">
+              <strong>{{fifthfifth.Course_name}}</strong><br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthfifth.Section}}大节<br>
+              <i nz-icon nzType="clock-circle" nzTheme="outline"></i> 第{{fifthfifth.Begin_Time}}-
+              {{fifthfifth.End_Time}}周<br>
+              <i nz-icon nzType="home" nzTheme="outline"></i> 课程号：{{fifthfifth.Course_ID}}<br>
+              <font *ngIf="showTea"><i nz-icon nzType="user" nzTheme="outline"></i> 教师：{{fifthfifth.Tea_name}}</font>
+              <font *ngIf="showClass"><i nz-icon nzType="team" nzTheme="outline"></i> 班级：{{fifthfifth.Class_id}}</font>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

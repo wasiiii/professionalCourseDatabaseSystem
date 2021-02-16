@@ -1,0 +1,36 @@
+<app-home></app-home>
+
+ <nz-select [(ngModel)]="selectedCourse" (ngModelChange)="courseChange($event)">
+    <nz-option *ngFor="let p of courseMap | keyvalue" [nzValue]="p.key" [nzLabel]="p.value"></nz-option>
+  </nz-select>
+   <button nz-button nzType="primary" (click)="commit()">提交</button>
+<nz-table nzBordered style="table-layout:fixed;">
+    <thead>
+      <tr>
+        <th>课程编号</th>
+        <th>课程名称</th>
+        <th>学号</th>
+        <th>学生姓名</th>
+        <th>分数</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of showCourse">
+        <td>
+            {{item.CourseID}}
+        </td>
+        <td>
+            {{item.CourseName}}
+        </td>
+        <td>
+            {{item.StuID}}
+        </td>
+        <td>
+            {{item.StuName}}
+        </td>
+        <td>
+            <nz-input-number [(ngModel)]=item.newGrade></nz-input-number>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

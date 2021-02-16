@@ -1,0 +1,32 @@
+<ul nz-menu nzMode="horizontal">
+    <li nz-menu-item routerLink="/personal">
+        <i nz-icon nzType="user"></i>
+        个人信息
+    </li>
+    <li nz-submenu nzTitle="课表" nzIcon="table">
+        <ul>
+            <ul>
+                <li nz-menu-item routerLink="/personal-timetable">个人课表</li>
+                <li nz-menu-item *ngIf="showClassTable" routerLink="/class-timetable">班级课表</li>
+            </ul>
+        </ul>
+    </li>
+    <li nz-menu-item *ngIf="showGradesRecord" routerLink="/grades-record">
+        <i nz-icon nzType="snippets"></i>
+        登分
+    </li>
+    <li nz-menu-item *ngIf="showCourseSelection" routerLink="/course-selection">
+        <i nz-icon nzType="book"></i>
+        选课
+    </li>
+    <li *ngIf="showManagement" nz-submenu nzTitle="管理" nzIcon="paper-clip" >
+        <ul>
+            <ul>
+                <li nz-menu-item routerLink="/course-arranging">排课</li>
+                <li nz-menu-item routerLink="/show-student">学生</li>
+                <li nz-menu-item routerLink="/show-teacher">教师</li>
+                <li nz-menu-item routerLink="/show-course">课程</li>
+            </ul>
+        </ul>
+    </li>
+</ul>

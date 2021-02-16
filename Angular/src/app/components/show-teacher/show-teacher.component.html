@@ -1,0 +1,24 @@
+<app-home></app-home>
+
+<nz-table nzBordered nzTitle="教师列表" style="table-layout:fixed;">
+    <thead>
+      <tr>
+        <th>工号</th>
+        <th>姓名</th>
+        <th>课程组</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tea">
+        <td>
+            {{item.TeaID}}
+        </td>
+        <td>
+            {{item.TeaName}}
+        </td>
+        <td>
+            <p *ngFor="let pp of item.Course"><strong>课程号：</strong>{{pp}}        <strong>课程名称：</strong>{{classMap[pp]}}</p>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
